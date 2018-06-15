@@ -1,0 +1,20 @@
+
+ip = input()
+arr = ip.split(',')
+opr = arr[1]
+op = int(arr[0])
+while(ip != '='):
+    ip = input()
+    if(ip != '='):
+        arr = ip.split(',')
+        val = int(arr[0])
+        if (opr == '+'):
+            op += val
+        elif(opr == '-'):
+            op -= val
+        elif(opr == '*'):
+            op *= val
+        elif(opr == '/'):
+            op /= val
+        opr = arr[1]
+print(op)
